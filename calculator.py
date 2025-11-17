@@ -40,6 +40,8 @@ def log(a, b):
         raise ValueError("Base cannot be nonpositive")
     elif a == 1:
         raise ValueError("Base cannot be 1")
+    elif b <= 0:
+        raise ValueError("Argument must be positive")
     return math.log(b, a)
 
 def exponent(a, b):
