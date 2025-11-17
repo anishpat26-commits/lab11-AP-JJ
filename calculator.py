@@ -15,13 +15,23 @@ def add(a, b):
 def subtract(a, b):
     return a - b
 
+def sub(a, b):
+    return a - b
+
 def multiply(a, b):
+    return a * b
+
+def mul(a, b):
     return a * b
 
 def divide(a, b):
     if a == 0:
         raise ZeroDivisionError("Cannot divide by zero.")
     return b / a
+
+def div(a, b):
+    if a == 0:
+        raise ZeroDivisionError("Division by 0")
 
 def logarithm(a, b):
     if a <= 0 or a == 1:
@@ -30,8 +40,17 @@ def logarithm(a, b):
         raise ValueError("Logarithm argument must be greater than zero.")
     return math.log(b, a)
 
+def log(a, b):
+    if a <= 0:
+        raise ValueError("Base cannot be nonpositive")
+    elif a == 1:
+        raise ValueError("Base cannot be 1")
+    return math.log(b, a)
+
 def exponent(a, b):
     return a ** b
 
+def exp(a, b):
+    return a ** b
 
 
